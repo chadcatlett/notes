@@ -1,0 +1,38 @@
+On 7...171
+
+Avocent seems to still provide a bulk of the core functionality.
+
+php appears to gone from the firmware, it had been in there for over a two decades.
+
+uacme is included and altered to always look for the ephermal apache configuration.
+
+Redfish includes 334 OEM specific endpoints. rofl
+
+Builtin Mellanox mezzanine simulator for an ethernet fabric
+
+discod is advertising oauth/redfish over tcp
+
+nss is configured to not only use compat and systemd, but to also be able to use containers as password/group sources.. o.O
+
+
+mod rewrite usage has exploded, a lot of things that used to be loaded as shared libraries are now fastcgi proxied.
+
+End Points:
+	/sysmgmt
+	/Applications
+	/api
+	/dtapi
+	/sysmgmt/2015/bmc/session
+	/protected/
+	/wsman
+	/sysmgmt|gmdwn|Applications|capconsole|capdata|bootcapture|crashcapture|cgi-bin/(exec|putfile|logout)
+	/gmdwn
+	/redfish/
+	/redfish/v1/..(too many to list)
+	/cgi-bin/ is still in usage
+
+OIDC/Oauth still seems to largely prefer Dell's idrac clustering crap
+
+mac address seems to have the burned in one as well as a config file stored both in read-only squashfs and runtime flash
+
+32bit ARM and occasionally a 64bit arm binary, but mostly 32bit.
