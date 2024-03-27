@@ -1,0 +1,12 @@
+PWM Init: 0x15, 0x16, 0x17, 0x7F, 0xA7, 0xAF
+
+Bank Selection:
+	Bank ID is limited to 5 bits, official interface code stores the
+	old bank id when switching. Need to figure out why.
+
+PWM Configuration:
+	On my board the PWMs can't be directly controlled, instead you
+	update some configuration tables with your desired settings.
+	This unfortunately has some limitations as you must use temperature
+	gradients to control the PWM outputs and a given PWM must reside on
+	the same controller as the temperature sensor.
